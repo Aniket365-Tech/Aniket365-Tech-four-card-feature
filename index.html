@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  
+  <title>Frontend Mentor | Four card feature section</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    html{
+      font-size: 62.5%;
+    }
+    .main-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: "Poppins", sans-serif;
+      font-weight: 300;
+       
+      
+    }
+    .card{
+      font-size: 1.5rem;
+      width: 100rem;
+      text-align: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .four-card-group{
+      width: 100%;
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(3, 1fr) ;
+      text-align: left;
+      padding: 1rem;
+      
+    }
+    .first-card{
+      height:20rem;
+      display: grid;
+      grid-column: 1;
+      grid-row: 2;
+      border-top:solid 4px red;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .second-card{
+      height: 20rem;
+      grid-column: 2;
+      grid-row: 1;
+      transform:translateY(+10rem);
+      border-top:solid 4px hsl(180, 62%, 55%);
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      
+    }
+    .third-card{
+      height: 20rem;
+      grid-column: 2;
+      grid-row: 3;
+      transform:translateY(-10rem);
+      border-top:solid 4px hsl(34, 97%, 64%);
+      padding: 1rem;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      
+      
+    }
+    .four-card{
+      height: 20rem;
+      grid-column: 3;
+      grid-row: 2;
+      border-top:solid 4px hsl(212, 86%, 64%);
+      padding: 1rem;
+       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+       
+    }
+    .icon{
+      display: flex;
+      position: static;
+      align-items: flex-end;
+      justify-content: end;
+      padding-top: 3rem;
+
+    }
+   
+    .heading h2{
+      color: hsl(212, 6%, 44%);
+      font-weight: normal;
+    }
+    .heading span{
+      color: hsl(234, 12%, 34%);
+      font-weight: bold;
+    
+    }
+
+     @media screen and (max-width: 26.88rem) {
+  .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .four-card-group {
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto;
+    padding: 1rem;
+  }
+
+  .first-card,
+  .second-card,
+  .third-card,
+  .four-card {
+    grid-column: auto;
+    grid-row: auto;
+    transform: none;
+    margin-bottom: 2rem;
+  }
+
+  .heading h2 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+}
+  @media screen and (max-width: 62.5rem) {
+  .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .four-card-group {
+    grid-template-columns: 1fr; /* Single column */
+    grid-template-rows: auto;
+    padding: 1rem;
+  }
+
+  .first-card,
+  .second-card,
+  .third-card,
+  .four-card {
+    grid-column: auto;
+    grid-row: auto;
+    transform: none;
+    margin-bottom: 2rem;
+  }
+
+  .heading h2 {
+    font-size: 1.8rem;
+  }
+
+  .heading p {
+    font-size: 0.9rem;
+  }
+}
+
+   
+
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="card">
+      <div class="heading">
+        <h2>Reliable, efficient delivery</h2>
+        <h2><span>Powered by Technology</span></h2><br>
+        <p>Our Artificial Intelligence powered tools use millions of project data <br> points to ensure that your project is successful</p>
+      </div>
+      <div class="four-card-group">
+        <div class="first-card">
+          <h2>Supervisor</h2>
+          <p>Monitors activity to identify project roadblocks</p>
+          <div class="icon">
+            <img src="./images/icon-supervisor.svg" alt="Supervisor">
+          </div>
+
+        </div>
+        <div class="second-card">
+           <h2>Team Builder</h2><br>
+          <p>Scans our talent network to create the optimal team for your project</p>
+          <div class="icon">
+            <img src="./images/icon-team-builder.svg" alt="icon-team-builder">
+          </div>
+        </div>
+
+        <div class="third-card">
+           <h2>Karma</h2><br>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <div class="icon">
+            <img src="./images/icon-karma.svg" alt="Karma">
+
+          </div>
+          
+        </div>
+        <div class="four-card">
+          <h2>Calculator</h2><br>
+          <p>uses data from past projects to provide better delivery estimates</p>
+          <div class="icon">
+            <img src="./images/icon-calculator.svg" alt="Supervisor">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  
+</body>
+</html>
